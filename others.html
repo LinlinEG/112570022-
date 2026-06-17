@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>其他款式與配件 | AURA Premium 鞋履首選</title>
+  <meta name="description" content="瀏覽 AURA 特色機能款式與護鞋配件，包括兒童機能防撞鞋、極致親膚記憶棉拖鞋與專業皮革保養套組。">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" id="logoLink">
+        <img src="assets/logo.png" alt="AURA Logo" class="logo-img">
+        <span>AURA</span>
+      </a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" id="navHome">首頁</a>
+        <a href="about.html" id="navAbout">品牌故事</a>
+        <a href="mens.html" id="navMens">男款系列</a>
+        <a href="womens.html" id="navWomens">女款系列</a>
+        <a href="others.html" class="active" id="navOthers">其他款式</a>
+        <a href="contact.html" id="navContact">聯絡我們</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="action-btn" id="menuToggle" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button class="action-btn" id="cartBtn" aria-label="Open Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="about-hero" style="padding: 60px 0; margin-bottom: 40px;">
+    <div class="container">
+      <h1>其他款式與配件</h1>
+      <p style="color: var(--text-muted);">專業越野、兒童足部防護、居家放鬆與愛鞋專屬保養配件</p>
+    </div>
+  </section>
+
+  <!-- Main Shop Layout -->
+  <main class="container products-layout">
+    <!-- Sidebar Filters -->
+    <aside class="filters-sidebar">
+      <div class="filter-group">
+        <h4>產品類別</h4>
+        <div class="filter-options">
+          <button class="filter-btn active" onclick="filterBySubcat('all', this)">全部商品</button>
+          <button class="filter-btn" onclick="filterBySubcat('shoes', this)">特殊機能鞋</button>
+          <button class="filter-btn" onclick="filterBySubcat('care', this)">專業保養套組</button>
+        </div>
+      </div>
+      
+      <div class="filter-group">
+        <h4>價格區間</h4>
+        <div class="filter-options">
+          <button class="filter-btn" onclick="filterByPrice(0, 1000, this)">NT$ 1,000 以下</button>
+          <button class="filter-btn" onclick="filterByPrice(1000, 2000, this)">NT$ 1,000 - 2,000</button>
+          <button class="filter-btn" onclick="filterByPrice(2000, 99999, this)">NT$ 2,000 以上</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Products Section -->
+    <section class="shop-container">
+      <div class="shop-toolbar">
+        <div class="products-count" id="productsCount">正在載入商品...</div>
+        <div>
+          <label for="sortSelect" style="font-size: 14px; margin-right: 8px; color: var(--text-muted);">排序方式:</label>
+          <select id="sortSelect" class="sort-select" onchange="handleSortChange()">
+            <option value="default">推薦熱銷</option>
+            <option value="price-low">價格: 低到高</option>
+            <option value="price-high">價格: 高到低</option>
+            <option value="rating">顧客評價最高</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Shop Grid -->
+      <div class="products-grid" id="shopProductsGrid">
+        <!-- Dynamically rendered other products -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>AURA</h3>
+        <p>AURA 致力於打破奢華手工工藝與科技機能鞋履之間的界線，帶給雙腳最極致的享受。</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-nav">
+        <h4>選購指南</h4>
+        <ul>
+          <li><a href="mens.html">男鞋系列</a></li>
+          <li><a href="womens.html">女鞋系列</a></li>
+          <li><a href="others.html">配件與其他</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav">
+        <h4>品牌資訊</h4>
+        <ul>
+          <li><a href="about.html">關於我們</a></li>
+          <li><a href="contact.html">聯絡我們</a></li>
+          <li><a href="#">門市據點</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>訂閱電子報</h4>
+        <p>獲得最新限量商品發售通知與 VIP 專屬優惠碼。</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="輸入您的電子信箱" required class="newsletter-input" aria-label="Email Address">
+          <button type="submit" class="newsletter-btn" aria-label="Submit Newsletter"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 AURA Shoe Premium Co. 版權所有。</p>
+      <p>設計與開發 &bull; Antigravity Craft</p>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="cart-overlay-bg" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>您的購物車</h3>
+      <button class="cart-close-btn" id="cartClose" aria-label="Close Cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items-wrapper" id="cartItemsWrapper">
+      <!-- Dynamic cart items will render here -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>小計:</span>
+        <span id="cartSubtotalVal">NT$ 0</span>
+      </div>
+      <button class="btn btn-primary" id="checkoutBtn" style="width: 100%; border-radius: 30px;">前往結帳</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let otherProducts = products.filter(p => p.category === "others");
+    let filteredList = [...otherProducts];
+    let activeSubcat = "all";
+    let activePriceRange = { min: 0, max: 999999 };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderShopGrid();
+    });
+
+    function renderShopGrid() {
+      const grid = document.getElementById("shopProductsGrid");
+      const countLabel = document.getElementById("productsCount");
+      if (!grid) return;
+
+      if (filteredList.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 80px 0;">
+            <i class="fas fa-search" style="font-size: 48px; opacity: 0.3; margin-bottom: 20px;"></i>
+            <p>沒有找到符合條件的商品</p>
+            <button class="btn btn-secondary" style="margin-top: 20px;" onclick="resetFilters()">重設篩選條件</button>
+          </div>
+        `;
+        countLabel.textContent = "找到 0 件商品";
+        return;
+      }
+
+      countLabel.textContent = `找到 ${filteredList.length} 件商品`;
+      grid.innerHTML = filteredList.map(prod => `
+        <div class="product-card">
+          <span class="product-badge">機能配件</span>
+          <div class="product-img-wrapper">
+            <a href="product.html?id=${prod.id}">
+              <img src="${prod.image}" alt="${prod.name}">
+            </a>
+          </div>
+          <div class="product-info">
+            <span class="product-cat">配件與其他</span>
+            <a href="product.html?id=${prod.id}">
+              <h3 class="product-title">${prod.name}</h3>
+            </a>
+            <div class="product-meta">
+              <div class="product-rating"><i class="fas fa-star"></i> ${prod.rating.toFixed(1)}</div>
+              <div class="product-reviews">(${prod.reviewsCount} 則評價)</div>
+            </div>
+            <div class="product-footer">
+              <div class="product-price-wrapper">
+                <span class="price">NT$ ${prod.price.toLocaleString()}</span>
+                ${prod.originalPrice ? `<span class="original-price">NT$ ${prod.originalPrice.toLocaleString()}</span>` : ''}
+              </div>
+              <a href="product.html?id=${prod.id}" class="add-to-cart-btn" aria-label="View Details">
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Filter Functions
+    function filterBySubcat(subcat, element) {
+      const btns = document.querySelectorAll(".filters-sidebar button");
+      btns.forEach(b => b.classList.remove("active"));
+      element.classList.add("active");
+
+      activeSubcat = subcat;
+      applyFilters();
+    }
+
+    function filterByPrice(min, max, element) {
+      const btns = document.querySelectorAll(".filters-sidebar button");
+      btns.forEach(b => b.classList.remove("active"));
+      element.classList.add("active");
+
+      activePriceRange = { min, max };
+      applyFilters();
+    }
+
+    function applyFilters() {
+      filteredList = otherProducts.filter(prod => {
+        const matchesPrice = prod.price >= activePriceRange.min && prod.price <= activePriceRange.max;
+        
+        let matchesSubcat = true;
+        if (activeSubcat === "shoes") {
+          matchesSubcat = prod.id === "others_1" || prod.id === "others_2" || prod.id === "others_3";
+        } else if (activeSubcat === "care") {
+          matchesSubcat = prod.id === "others_4";
+        }
+
+        return matchesPrice && matchesSubcat;
+      });
+
+      handleSortChange();
+    }
+
+    function handleSortChange() {
+      const sortVal = document.getElementById("sortSelect").value;
+      if (sortVal === "price-low") {
+        filteredList.sort((a, b) => a.price - b.price);
+      } else if (sortVal === "price-high") {
+        filteredList.sort((a, b) => b.price - a.price);
+      } else if (sortVal === "rating") {
+        filteredList.sort((a, b) => b.rating - a.rating);
+      } else {
+        filteredList.sort((a, b) => a.id.localeCompare(b.id));
+      }
+      renderShopGrid();
+    }
+
+    function resetFilters() {
+      const btns = document.querySelectorAll(".filters-sidebar button");
+      btns.forEach(b => b.classList.remove("active"));
+      document.querySelector(".filters-sidebar button").classList.add("active");
+
+      activeSubcat = "all";
+      activePriceRange = { min: 0, max: 999999 };
+      filteredList = [...otherProducts];
+      document.getElementById("sortSelect").value = "default";
+      renderShopGrid();
+    }
+  </script>
+</body>
+</html>

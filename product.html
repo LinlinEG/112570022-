@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品詳細資訊 | AURA Premium 鞋履首選</title>
+  <meta name="description" content="瀏覽商品詳細規格、尺碼選擇、款式顏色以及顧客評價。AURA 專注於細節，為您提供最極致的手工品質與穿著腳感。">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" id="logoLink">
+        <img src="assets/logo.png" alt="AURA Logo" class="logo-img">
+        <span>AURA</span>
+      </a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" id="navHome">首頁</a>
+        <a href="about.html" id="navAbout">品牌故事</a>
+        <a href="mens.html" id="navMens">男款系列</a>
+        <a href="womens.html" id="navWomens">女款系列</a>
+        <a href="others.html" id="navOthers">其他款式</a>
+        <a href="contact.html" id="navContact">聯絡我們</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="action-btn" id="menuToggle" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button class="action-btn" id="cartBtn" aria-label="Open Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="container" style="margin-top: 30px; font-size: 14px; color: var(--text-muted);">
+    <a href="index.html" style="color: var(--text-muted);">首頁</a> &gt; 
+    <span id="breadcrumbCat"><a href="mens.html">男款系列</a></span> &gt; 
+    <span id="breadcrumbTitle" style="color: var(--primary); font-weight: 600;">商品詳細資訊</span>
+  </div>
+
+  <!-- Product Detail Core Layout -->
+  <main class="container product-detail-grid">
+    <!-- Gallery -->
+    <section class="product-gallery">
+      <div class="main-image-container">
+        <img src="assets/mens_1.png" alt="Product Main Image" id="mainProductImage">
+      </div>
+      <div class="gallery-thumbnails" id="galleryThumbnails">
+        <!-- Thumbnails rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- Detail Info Panel -->
+    <section class="detail-content">
+      <div class="detail-cat" id="detailCatLabel">AURA PREMIUM COLLECTION</div>
+      <h1 class="detail-title" id="detailTitle">載入中商品名稱</h1>
+      
+      <div class="detail-rating-wrapper">
+        <div style="color: #f39c12; font-size: 18px;">
+          <i class="fas fa-star"></i> <span id="detailRatingVal" style="font-weight: 700; color: var(--primary);">4.8</span>
+        </div>
+        <span class="detail-reviews" id="detailReviewsCount" style="color: var(--text-muted); font-size: 14px;">(0 則評價)</span>
+      </div>
+
+      <div class="detail-price-wrapper">
+        <span class="detail-price" id="detailPrice">NT$ 0</span>
+        <span class="detail-original-price" id="detailOriginalPrice">NT$ 0</span>
+      </div>
+
+      <p class="detail-description" id="detailDescription">
+        正在載入此商品的詳細介紹，請稍候...
+      </p>
+
+      <!-- Selection Forms -->
+      <div class="selector-group">
+        <h4>選擇顏色</h4>
+        <div class="color-options" id="colorOptions">
+          <!-- Dynamic Color badges -->
+        </div>
+      </div>
+
+      <div class="selector-group" style="margin-bottom: 30px;">
+        <h4>選擇尺寸 (EU)</h4>
+        <div class="size-options" id="sizeOptions">
+          <!-- Dynamic Size badges -->
+        </div>
+      </div>
+
+      <!-- Qty and CTA Actions -->
+      <div class="detail-actions">
+        <div class="qty-selector">
+          <button class="qty-btn" id="qtyMinus" aria-label="Decrease Quantity">&minus;</button>
+          <span class="qty-val" id="qtyVal">1</span>
+          <button class="qty-btn" id="qtyPlus" aria-label="Increase Quantity">&#43;</button>
+        </div>
+        <button class="btn btn-primary buy-btn" id="detailAddToCart">
+          <i class="fas fa-shopping-bag" style="margin-right: 10px;"></i> 加入購物車
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Detailed Tabs (Specs & Reviews) -->
+  <section class="container tabs-container">
+    <div class="tab-headers">
+      <div class="tab-header active" data-tab="tabSpecs">商品規格</div>
+      <div class="tab-header" data-tab="tabReviews">顧客評價</div>
+    </div>
+    
+    <!-- Specs Panel -->
+    <div class="tab-panel active" id="tabSpecs">
+      <table class="specs-table">
+        <tbody id="specsTableBody">
+          <!-- Dynamic specs row -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Reviews Panel -->
+    <div class="tab-panel" id="tabReviews">
+      <div class="review-list" id="reviewList">
+        <!-- Dynamic reviews list -->
+      </div>
+
+      <!-- Add Review Form -->
+      <div class="write-review-section">
+        <h3>發表您的評價</h3>
+        <form id="reviewForm">
+          <div class="form-group" style="max-width: 300px;">
+            <label for="reviewName">您的姓名 *</label>
+            <input type="text" id="reviewName" class="form-control" placeholder="例: 王小明" required>
+          </div>
+          
+          <div class="form-group">
+            <label>評分星等 *</label>
+            <div class="rating-select" id="ratingSelect">
+              <i class="fas fa-star rating-star selected" data-rating="1"></i>
+              <i class="fas fa-star rating-star selected" data-rating="2"></i>
+              <i class="fas fa-star rating-star selected" data-rating="3"></i>
+              <i class="fas fa-star rating-star selected" data-rating="4"></i>
+              <i class="fas fa-star rating-star selected" data-rating="5"></i>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="reviewText">評價內容 *</label>
+            <textarea id="reviewText" class="form-control" placeholder="請分享您穿著這雙鞋子的真實體驗..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="padding: 12px 30px; font-size: 14px; border-radius: 20px;">送出評價</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products Section -->
+  <section class="container related-section">
+    <div class="section-title">
+      <h2>您可能也會喜歡</h2>
+      <p>根據您瀏覽的類別推薦以下精選單品</p>
+    </div>
+    <div class="products-grid" id="relatedProductsGrid">
+      <!-- Dynamic related products -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>AURA</h3>
+        <p>AURA 致力於打破奢華手工工藝與科技機能鞋履之間的界線，帶給雙腳最極致的享受。</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-nav">
+        <h4>選購指南</h4>
+        <ul>
+          <li><a href="mens.html">男鞋系列</a></li>
+          <li><a href="womens.html">女鞋系列</a></li>
+          <li><a href="others.html">配件與其他</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav">
+        <h4>品牌資訊</h4>
+        <ul>
+          <li><a href="about.html">關於我們</a></li>
+          <li><a href="contact.html">聯絡我們</a></li>
+          <li><a href="#">門市據點</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>訂閱電子報</h4>
+        <p>獲得最新限量商品發售通知與 VIP 專屬優惠碼。</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="輸入您的電子信箱" required class="newsletter-input" aria-label="Email Address">
+          <button type="submit" class="newsletter-btn" aria-label="Submit Newsletter"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 AURA Shoe Premium Co. 版權所有。</p>
+      <p>設計與開發 &bull; Antigravity Craft</p>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="cart-overlay-bg" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>您的購物車</h3>
+      <button class="cart-close-btn" id="cartClose" aria-label="Close Cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items-wrapper" id="cartItemsWrapper">
+      <!-- Dynamic cart items will render here -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>小計:</span>
+        <span id="cartSubtotalVal">NT$ 0</span>
+      </div>
+      <button class="btn btn-primary" id="checkoutBtn" style="width: 100%; border-radius: 30px;">前往結帳</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>

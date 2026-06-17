@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA | 探索極致舒適與時尚手工鞋履</title>
+  <meta name="description" content="AURA 結合傳統製鞋工藝與現代舒適科技，為您打造男款、女款及多用途機能鞋履，探索踏出自信的每一步。">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" id="logoLink">
+        <img src="assets/logo.png" alt="AURA Logo" class="logo-img">
+        <span>AURA</span>
+      </a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active" id="navHome">首頁</a>
+        <a href="about.html" id="navAbout">品牌故事</a>
+        <a href="mens.html" id="navMens">男款系列</a>
+        <a href="womens.html" id="navWomens">女款系列</a>
+        <a href="others.html" id="navOthers">其他款式</a>
+        <a href="contact.html" id="navContact">聯絡我們</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="action-btn" id="menuToggle" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button class="action-btn" id="cartBtn" aria-label="Open Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-tagline">Step into Perfection</span>
+        <h1>編織工藝與<br>機能科技的極致融合</h1>
+        <p class="hero-description">
+          AURA 相信每一雙鞋都是一件藝術品。我們結合人體工學結構與頂級環保皮革，只為給您無可挑剔的漫步腳感。
+        </p>
+        <div class="hero-buttons">
+          <a href="mens.html" class="btn btn-primary" id="heroShopBtn">立即選購</a>
+          <a href="about.html" class="btn btn-secondary" id="heroStoryBtn">品牌故事</a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <div class="hero-bg-glow"></div>
+        <img src="assets/mens_2.png" alt="Featured Run Sneaker" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Grid -->
+  <section class="container" style="margin-bottom: 80px;">
+    <div class="section-title">
+      <h2>經典系列分類</h2>
+      <p>針對不同情境設計，滿足您所有的日常與運動穿搭需求</p>
+    </div>
+    <div class="categories-grid">
+      <!-- Men's -->
+      <a href="mens.html" class="category-card" id="catCardMens">
+        <img src="assets/mens_1.png" alt="Men's collection">
+        <div class="category-overlay">
+          <h3>紳士男款</h3>
+          <span class="category-link">探索系列 <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <!-- Women's -->
+      <a href="womens.html" class="category-card" id="catCardWomens">
+        <img src="assets/womens_1.png" alt="Women's collection">
+        <div class="category-overlay">
+          <h3>雅緻女款</h3>
+          <span class="category-link">探索系列 <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <!-- Others -->
+      <a href="others.html" class="category-card" id="catCardOthers">
+        <img src="assets/others_1.png" alt="Other categories">
+        <div class="category-overlay">
+          <h3>休閒與保養</h3>
+          <span class="category-link">探索系列 <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="container" style="margin-bottom: 80px;">
+    <div class="section-title">
+      <h2>本季熱銷單品</h2>
+      <p>精選年度最受歡迎的熱門款式，兼顧時尚美學與卓越機能</p>
+    </div>
+    <div class="products-grid" id="featuredGrid">
+      <!-- Will show top 4 popular products dynamically -->
+    </div>
+  </section>
+
+  <!-- Brand Features -->
+  <section class="container">
+    <div class="features-section">
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-gem"></i></div>
+          <h3>頂級選材</h3>
+          <p>只選用頂級進口頭層皮革與高透氣極輕機能纖維。</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-hands-helping"></i></div>
+          <h3>純手工製造</h3>
+          <p>三十年經驗師傅一針一線親手縫製，追求完美細節。</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+          <h3>全台免運</h3>
+          <p>消費滿額即享全台宅配免運，提供7天鑑賞無憂退換。</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-headset"></i></div>
+          <h3>專業客服</h3>
+          <p>貼心一對一售後管家服務，提供您專業的尺寸諮詢。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>AURA</h3>
+        <p>AURA 致力於打破奢華手工工藝與科技機能鞋履之間的界線，帶給雙腳最極致的享受。</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-nav">
+        <h4>選購指南</h4>
+        <ul>
+          <li><a href="mens.html">男鞋系列</a></li>
+          <li><a href="womens.html">女鞋系列</a></li>
+          <li><a href="others.html">配件與其他</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav">
+        <h4>品牌資訊</h4>
+        <ul>
+          <li><a href="about.html">關於我們</a></li>
+          <li><a href="contact.html">聯絡我們</a></li>
+          <li><a href="#">門市據點</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>訂閱電子報</h4>
+        <p>獲得最新限量商品發售通知與 VIP 專屬優惠碼。</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="輸入您的電子信箱" required class="newsletter-input" aria-label="Email Address">
+          <button type="submit" class="newsletter-btn" aria-label="Submit Newsletter"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 AURA Shoe Premium Co. 版權所有。</p>
+      <p>設計與開發 &bull; Antigravity Craft</p>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="cart-overlay-bg" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>您的購物車</h3>
+      <button class="cart-close-btn" id="cartClose" aria-label="Close Cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items-wrapper" id="cartItemsWrapper">
+      <!-- Dynamic cart items will render here -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>小計:</span>
+        <span id="cartSubtotalVal">NT$ 0</span>
+      </div>
+      <button class="btn btn-primary" id="checkoutBtn" style="width: 100%; border-radius: 30px;">前往結帳</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Dynamically show 4 popular products on homepage
+    document.addEventListener("DOMContentLoaded", () => {
+      const featuredGrid = document.getElementById("featuredGrid");
+      if (featuredGrid) {
+        // Take mens_1, womens_1, mens_4, womens_4 for a balanced selection
+        const featuredIds = ["mens_1", "womens_1", "mens_4", "womens_4"];
+        const featuredProducts = products.filter(p => featuredIds.includes(p.id));
+        
+        featuredGrid.innerHTML = featuredProducts.map(prod => `
+          <div class="product-card">
+            <span class="product-badge">人氣熱銷</span>
+            <div class="product-img-wrapper">
+              <a href="product.html?id=${prod.id}">
+                <img src="${prod.image}" alt="${prod.name}">
+              </a>
+            </div>
+            <div class="product-info">
+              <span class="product-cat">${prod.category === 'men' ? '男款' : (prod.category === 'women' ? '女款' : '其他')}</span>
+              <a href="product.html?id=${prod.id}">
+                <h3 class="product-title">${prod.name}</h3>
+              </a>
+              <div class="product-meta">
+                <div class="product-rating"><i class="fas fa-star"></i> ${prod.rating.toFixed(1)}</div>
+                <div class="product-reviews">(${prod.reviewsCount} 則評價)</div>
+              </div>
+              <div class="product-footer">
+                <div class="product-price-wrapper">
+                  <span class="price">NT$ ${prod.price.toLocaleString()}</span>
+                </div>
+                <a href="product.html?id=${prod.id}" class="add-to-cart-btn" aria-label="View Product">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>
